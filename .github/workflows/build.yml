@@ -17,7 +17,7 @@ jobs:
 
     env:
       CI: true
-      CI_BUILD_VERSION: 1.4.0.${{ github.run_number }}
+      CI_BUILD_VERSION: 1.4.21
 
     steps:
       - name: Checkout
@@ -29,9 +29,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build 2023.1
+      - name: Build 2025.1.2
         env:
-          IDEA_VER: 231
+          IDEA_VER: 251
         run: ./gradlew buildPlugin
 
       - name: Upload artifact
